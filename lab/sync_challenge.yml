@@ -1,0 +1,21 @@
+- hosts: host01
+  tasks:
+  - name: "copy website"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: 'World'
+      replace: 'HOST1'
+- hosts: host02
+  tasks:
+  - name: "copy website"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: 'World'
+      replace: 'HOST2'
+- hosts: host03
+  tasks:
+  - name: "copy website"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: 'World'
+      replace: 'HOST3'
